@@ -1,9 +1,7 @@
 import bot from "../bot";
 import learnMore from "../commands/learnMore";
 import showMainMenu from "../commands/showMainMenu";
-import responseTexts from "../responseTexts";
-import getMainMenuButtons from "../utils/getMainMenuButtons";
-import getMainMenuButtonsExcluding from "../utils/getMainMenuButtonsExcluding";
+import why from "../commands/why";
 
 bot.on("callback_query", (q) => {
   const chatId = q.message?.chat.id;
@@ -13,10 +11,18 @@ bot.on("callback_query", (q) => {
 
   switch (data) {
     case "mainMenu":
-      return showMainMenu(chatId);
+      showMainMenu(chatId);
+      break;
     case "learnMore":
       learnMore(chatId);
+      break;
+    case "why":
+      why(chatId);
+      break;
     default:
       console.warn("No such callback query!");
+      const errorResponseText =
+        "Извините, произошла ошибка. Можете попробовать ещё раз, но это вряд ли поможет";
+      bot.sendMessage(chatId, errorResponseText);
   }
 });

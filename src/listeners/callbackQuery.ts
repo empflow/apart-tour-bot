@@ -1,7 +1,9 @@
 import bot from "../bot";
+import buyTour from "../commands/buyTour";
 import examples from "../commands/examples";
 import learnMore from "../commands/learnMore";
-import showMainMenu from "../commands/showMainMenu";
+import seePrices from "../commands/seePrices";
+import mainMenu from "../commands/mainMenu";
 import why from "../commands/why";
 
 bot.on("callback_query", (q) => {
@@ -12,7 +14,7 @@ bot.on("callback_query", (q) => {
 
   switch (data) {
     case "mainMenu":
-      showMainMenu(chatId);
+      mainMenu(chatId);
       break;
     case "learnMore":
       learnMore(chatId);
@@ -22,6 +24,12 @@ bot.on("callback_query", (q) => {
       break;
     case "examples":
       examples(chatId);
+      break;
+    case "buyTour":
+      buyTour(chatId);
+      break;
+    case "seePrices":
+      seePrices(chatId);
       break;
     default:
       console.warn("No such callback query!");

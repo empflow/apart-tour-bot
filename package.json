@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.61.6",
     "ts-node-dev": "^2.0.0"
   },
   "dependencies": {

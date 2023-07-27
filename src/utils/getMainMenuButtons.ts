@@ -1,7 +1,4 @@
-import {
-  InlineKeyboardButton,
-  InlineKeyboardMarkup,
-} from "node-telegram-bot-api";
+import { InlineKeyboardButton } from "node-telegram-bot-api";
 import {
   buyTourButton,
   examplesButton,

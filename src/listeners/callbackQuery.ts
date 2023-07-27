@@ -1,4 +1,5 @@
 import bot from "../bot";
+import examples from "../commands/examples";
 import learnMore from "../commands/learnMore";
 import showMainMenu from "../commands/showMainMenu";
 import why from "../commands/why";
@@ -18,6 +19,9 @@ bot.on("callback_query", (q) => {
       break;
     case "why":
       why(chatId);
+      break;
+    case "examples":
+      examples(chatId);
       break;
     default:
       console.warn("No such callback query!");

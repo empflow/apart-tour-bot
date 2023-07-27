@@ -1,4 +1,6 @@
 import bot from "../bot";
+import learnMore from "../commands/learnMore";
+import showMainMenu from "../commands/showMainMenu";
 import responseTexts from "../responseTexts";
 import getMainMenuButtons from "../utils/getMainMenuButtons";
 import getMainMenuButtonsExcluding from "../utils/getMainMenuButtonsExcluding";
@@ -11,17 +13,9 @@ bot.on("callback_query", (q) => {
 
   switch (data) {
     case "mainMenu":
-      bot.sendMessage(chatId, responseTexts.mainMenu, {
-        reply_markup: {
-          inline_keyboard: getMainMenuButtons(),
-        },
-      });
+      return showMainMenu(chatId);
     case "learnMore":
-      bot.sendMessage(chatId, responseTexts.learnMore, {
-        reply_markup: {
-          inline_keyboard: getMainMenuButtonsExcluding("learnMore"),
-        },
-      });
+      learnMore(chatId);
     default:
       console.warn("No such callback query!");
   }

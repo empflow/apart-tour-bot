@@ -1,7 +1,10 @@
 import dotenv from "dotenv";
 dotenv.config();
 import "./bot";
-import "./callbackQuery";
+
+// listeners
+import "./listeners/callbackQuery";
+import "./listeners/pollingError";
 
 // commands
 import "./commands/start";

@@ -16,7 +16,7 @@ bot.onText(/\/start/, async (msg) => {
 
 function getReplyMarkup(): ReplyMarkup {
   return {
-    inline_keyboard: [[{ text: "Далее", callback_data: "showMainMenu" }]],
+    inline_keyboard: [[{ text: "Далее", callback_data: "mainMenu" }]],
   };
 }
 

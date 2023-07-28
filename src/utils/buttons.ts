@@ -24,3 +24,8 @@ export const messageDirectlyButton: InlineKeyboardButton = {
   text: "📞 Связаться со мной",
   callback_data: "messageDirectly",
 };
+
+export const backToMenuButton: InlineKeyboardButton = {
+  text: "↩️ Вернуться в меню",
+  callback_data: "mainMenu",
+};

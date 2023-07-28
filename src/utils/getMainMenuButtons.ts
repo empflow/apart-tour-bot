@@ -1,18 +1,18 @@
 import { InlineKeyboardButton } from "node-telegram-bot-api";
 import {
-  buyTourButton,
-  examplesButton,
-  learnMoreButton,
-  messageDirectlyButton,
-  whyButton,
+  buyTourCbBtn,
+  examplesCbBtn,
+  learnMoreCbBtn,
+  messageDirectlyCbBtn,
+  whyCbBtn,
 } from "./buttons";
 
 export default function getMainMenuButtons(): InlineKeyboardButton[][] {
   return [
-    [learnMoreButton],
-    [whyButton],
-    [examplesButton],
-    [buyTourButton],
-    [messageDirectlyButton],
+    [learnMoreCbBtn],
+    [whyCbBtn],
+    [examplesCbBtn],
+    [buyTourCbBtn],
+    [messageDirectlyCbBtn],
   ];
 }

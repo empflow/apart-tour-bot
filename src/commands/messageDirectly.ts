@@ -4,17 +4,17 @@ import {
 } from "node-telegram-bot-api";
 import bot from "../bot";
 import responseTexts from "../responseTexts";
-import { backToMenuButton, sendMyPhoneNumberButton } from "../utils/buttons";
+import { backToMenuCbBtn, sendMyPhoneNumberKbBtn } from "../utils/buttons";
 
 export default function messageDirectly(chatId: number) {
   const replyMarkupWithKeyboard: ReplyKeyboardMarkup = {
-    keyboard: [[sendMyPhoneNumberButton]],
+    keyboard: [[sendMyPhoneNumberKbBtn]],
     resize_keyboard: true,
     one_time_keyboard: true,
   };
 
   const replyMarkupWithInlineKeyboard: InlineKeyboardMarkup = {
-    inline_keyboard: [[backToMenuButton]],
+    inline_keyboard: [[backToMenuCbBtn]],
   };
 
   bot.sendMessage(chatId, responseTexts.messageDirectly, {

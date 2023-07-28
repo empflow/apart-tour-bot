@@ -1,41 +1,45 @@
 import { InlineKeyboardButton, KeyboardButton } from "node-telegram-bot-api";
 
-export const learnMoreButton: InlineKeyboardButton = {
+// Cb stands for callback
+// Kb stands for keyboard
+// Btn stands for button
+
+export const learnMoreCbBtn: InlineKeyboardButton = {
   text: "📖 Подробнее про stop-motion туры",
   callback_data: "learnMore",
 };
 
-export const whyButton: InlineKeyboardButton = {
+export const whyCbBtn: InlineKeyboardButton = {
   text: "❓ Зачем мне нужен stop-motion тур?",
   callback_data: "why",
 };
 
-export const examplesButton: InlineKeyboardButton = {
+export const examplesCbBtn: InlineKeyboardButton = {
   text: "👀 Посмотреть примеры работ",
   callback_data: "examples",
 };
 
-export const buyTourButton: InlineKeyboardButton = {
+export const buyTourCbBtn: InlineKeyboardButton = {
   text: "🎥 Хочу отснять недвижимость",
   callback_data: "buyTour",
 };
 
-export const messageDirectlyButton: InlineKeyboardButton = {
+export const messageDirectlyCbBtn: InlineKeyboardButton = {
   text: "📞 Связаться со мной",
   callback_data: "messageDirectly",
 };
 
-export const backToMenuButton: InlineKeyboardButton = {
+export const backToMenuCbBtn: InlineKeyboardButton = {
   text: "↩️ Вернуться в меню",
   callback_data: "mainMenu",
 };
 
-export const seePricesButton: InlineKeyboardButton = {
+export const seePricesCbBtn: InlineKeyboardButton = {
   text: "Узнать стоимость",
   callback_data: "seePrices",
 };
 
-export const sendMyPhoneNumberButton: KeyboardButton = {
+export const sendMyPhoneNumberKbBtn: KeyboardButton = {
   text: "📞 Отправить мой номер телефона",
   request_contact: true,
 };

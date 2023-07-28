@@ -12,7 +12,6 @@ bot.on("callback_query", (q) => {
   const chatId = q.message?.chat.id;
   if (!chatId) return;
   const { data } = q;
-  console.log(data);
 
   switch (data) {
     case "mainMenu":

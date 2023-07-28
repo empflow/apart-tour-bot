@@ -43,7 +43,7 @@ export const messageDirectlyBtnWithLink: InlineKeyboardButton = {
   text: `<a href="https://t.me/@empflow">Написать напрямую</a>`,
 };
 
-export const sendMyPhoneNumberKbBtn: KeyboardButton = {
+export const sendMyPhoneNumKbBtn: KeyboardButton = {
   text: "📞 Отправить мой номер телефона",
   request_contact: true,
 };

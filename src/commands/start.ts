@@ -1,7 +1,7 @@
 import bot from "../bot";
 import TelegramBot from "node-telegram-bot-api";
 import { ReplyMarkup } from "../utils/types";
-import responseTexts from "../responseTexts";
+import respTexts from "../respTexts";
 
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
@@ -10,7 +10,7 @@ bot.onText(/\/start/, async (msg) => {
 
   const name = getUserNameFromMsg(msg);
   await bot.sendPhoto(chatId, imgFileId, {
-    caption: responseTexts.start(name),
+    caption: respTexts.start(name),
     reply_markup: getReplyMarkup(),
     parse_mode: "HTML",
   });

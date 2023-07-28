@@ -5,5 +5,6 @@ import { backToMenuButton } from "../utils/buttons";
 export default function seePrices(chatId: number) {
   bot.sendMessage(chatId, responseTexts.seePrices, {
     reply_markup: { inline_keyboard: [[backToMenuButton]] },
+    parse_mode: "HTML",
   });
 }

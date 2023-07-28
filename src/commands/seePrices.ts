@@ -1,4 +1,3 @@
-import { InlineKeyboardButton } from "node-telegram-bot-api";
 import bot from "../bot";
 import responseTexts from "../responseTexts";
 import { backToMenuButton } from "../utils/buttons";

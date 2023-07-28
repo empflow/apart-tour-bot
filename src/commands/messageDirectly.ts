@@ -12,6 +12,7 @@ export default function messageDirectly(chatId: number) {
       [{ text: "Отправить мой номер телефона", request_contact: true }],
     ],
     resize_keyboard: true,
+    one_time_keyboard: true,
   };
 
   const replyMarkupWithInlineKeyboard: InlineKeyboardMarkup = {

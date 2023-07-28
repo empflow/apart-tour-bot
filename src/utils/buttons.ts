@@ -39,6 +39,10 @@ export const seePricesCbBtn: InlineKeyboardButton = {
   callback_data: "seePrices",
 };
 
+export const messageDirectlyBtnWithLink: InlineKeyboardButton = {
+  text: `<a href="https://t.me/@empflow">Написать напрямую</a>`,
+};
+
 export const sendMyPhoneNumberKbBtn: KeyboardButton = {
   text: "📞 Отправить мой номер телефона",
   request_contact: true,

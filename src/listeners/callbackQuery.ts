@@ -5,6 +5,7 @@ import learnMore from "../commands/learnMore";
 import seePrices from "../commands/seePrices";
 import mainMenu from "../commands/mainMenu";
 import why from "../commands/why";
+import messageDirectly from "../commands/messageDirectly";
 
 bot.on("callback_query", (q) => {
   const chatId = q.message?.chat.id;
@@ -30,6 +31,9 @@ bot.on("callback_query", (q) => {
       break;
     case "seePrices":
       seePrices(chatId);
+      break;
+    case "messageDirectly":
+      messageDirectly(chatId);
       break;
     default:
       console.warn("No such callback query!");

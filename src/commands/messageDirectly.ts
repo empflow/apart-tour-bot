@@ -19,9 +19,6 @@ export default function messageDirectly(chatId: number) {
     inline_keyboard: [[backToMenuButton]],
   };
 
-  // is_persistent always keeps the button keyboard open when the regular keyboard is hidden
-  // one_time_keyboard hides the buttons keyboard as soon as one of the buttons has been pressed (can be re-opened with a keyboard icon)
-
   bot.sendMessage(chatId, responseTexts.messageDirectly, {
     reply_markup: replyMarkupWithKeyboard,
   });

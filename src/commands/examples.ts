@@ -1,9 +1,9 @@
 import bot from "../bot";
 import responseTexts from "../responseTexts";
-import getMainMenuButtonsExcluding from "../utils/getMainMenuButtonsExcluding";
+import { backToMenuButton } from "../utils/buttons";
 
 export default function examples(chatId: number) {
   bot.sendMessage(chatId, responseTexts.examples, {
-    reply_markup: { inline_keyboard: getMainMenuButtonsExcluding("examples") },
+    reply_markup: { inline_keyboard: [[backToMenuButton]] },
   });
 }

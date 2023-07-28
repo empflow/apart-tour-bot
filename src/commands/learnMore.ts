@@ -1,9 +1,9 @@
 import bot from "../bot";
 import responseTexts from "../responseTexts";
-import getMainMenuButtonsExcluding from "../utils/getMainMenuButtonsExcluding";
+import { backToMenuButton } from "../utils/buttons";
 
 export default function learnMore(chatId: number) {
   bot.sendMessage(chatId, responseTexts.learnMore, {
-    reply_markup: { inline_keyboard: getMainMenuButtonsExcluding("learnMore") },
+    reply_markup: { inline_keyboard: [[backToMenuButton]] },
   });
 }

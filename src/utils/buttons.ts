@@ -1,4 +1,4 @@
-import { InlineKeyboardButton } from "node-telegram-bot-api";
+import { InlineKeyboardButton, KeyboardButton } from "node-telegram-bot-api";
 
 export const learnMoreButton: InlineKeyboardButton = {
   text: "📖 Подробнее про stop-motion туры",
@@ -28,4 +28,14 @@ export const messageDirectlyButton: InlineKeyboardButton = {
 export const backToMenuButton: InlineKeyboardButton = {
   text: "↩️ Вернуться в меню",
   callback_data: "mainMenu",
+};
+
+export const seePricesButton: InlineKeyboardButton = {
+  text: "Узнать стоимость",
+  callback_data: "seePrices",
+};
+
+export const sendMyPhoneNumberButton: KeyboardButton = {
+  text: "Отправить мой номер телефона",
+  request_contact: true,
 };

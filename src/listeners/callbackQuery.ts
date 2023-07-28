@@ -6,6 +6,7 @@ import seePrices from "../commands/seePrices";
 import mainMenu from "../commands/mainMenu";
 import why from "../commands/why";
 import messageDirectly from "../commands/messageDirectly";
+import respTexts from "../respTexts";
 
 bot.on("callback_query", (q) => {
   const chatId = q.message?.chat.id;
@@ -36,9 +37,7 @@ bot.on("callback_query", (q) => {
       messageDirectly(chatId);
       break;
     default:
-      console.warn("No such callback query!");
-      const errorResponseText =
-        "Извините, произошла ошибка. Можете попробовать ещё раз, но это вряд ли поможет";
-      bot.sendMessage(chatId, errorResponseText);
+      console.warn(`${data} is not a valid callback query!`);
+      bot.sendMessage(chatId, respTexts.err);
   }
 });

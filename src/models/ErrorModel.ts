@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 interface IError {
-  type: string;
+  type: "generic" | "polling";
   message: string;
   stacktrace?: string;
 }
@@ -10,10 +10,11 @@ const ErrorSchema = new mongoose.Schema({
   type: {
     required: true,
     type: String,
+    enum: ["generic", "polling"],
   },
   message: {
-    required: true,
     type: String,
+    default: null,
   },
   stacktrace: {
     required: false,

@@ -5,7 +5,7 @@ import respTexts from "../respTexts";
 import { backToMenuCbBtn } from "../utils/buttons";
 import isErrDuplicateErr from "../utils/isErrDuplicateErr";
 import sendErrMsg from "../utils/sendErrMsg";
-import { backToMenuOpts } from "../utils/sendMsgOpts";
+import { backToMenuBtnOpts } from "../utils/sendMsgOpts";
 
 bot.on("contact", async (msg) => {
   const chatId = msg.chat.id;
@@ -15,9 +15,13 @@ bot.on("contact", async (msg) => {
     await saveContactToDb(msg.contact);
   } catch (err) {
     if (isErrDuplicateErr(err)) {
-      return sendErrMsg(chatId, respTexts.duplicatePhoneNumErr, backToMenuOpts);
+      return sendErrMsg(
+        chatId,
+        respTexts.duplicatePhoneNumErr,
+        backToMenuBtnOpts
+      );
     }
-    return sendErrMsg(chatId, respTexts.savingPhoneNumErr, backToMenuOpts);
+    return sendErrMsg(chatId, respTexts.savingPhoneNumErr, backToMenuBtnOpts);
   }
 
   bot.sendMessage(chatId, respTexts.contactReceived, {

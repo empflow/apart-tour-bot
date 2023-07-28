@@ -21,7 +21,7 @@ export default function messageDirectly(chatId: number) {
     reply_markup: replyMarkupWithKeyboard,
     parse_mode: "HTML",
   });
-  bot.sendMessage(chatId, "Или можете вернуться в меню:", {
+  bot.sendMessage(chatId, responseTexts.goToMenuOption, {
     reply_markup: replyMarkupWithInlineKeyboard,
     parse_mode: "HTML",
   });

@@ -1,6 +1,7 @@
 import bot from "../bot";
 import TelegramBot from "node-telegram-bot-api";
 import { ReplyMarkup } from "../utils/types";
+import responseTexts from "../responseTexts";
 
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
@@ -9,8 +10,9 @@ bot.onText(/\/start/, async (msg) => {
 
   const name = getUserNameFromMsg(msg);
   await bot.sendPhoto(chatId, imgFileId, {
-    caption: getImgCaption(name),
+    caption: responseTexts.start(name),
     reply_markup: getReplyMarkup(),
+    parse_mode: "HTML",
   });
 });
 
@@ -34,10 +36,4 @@ function getUserNameFromMsg(msg: TelegramBot.Message) {
   if (lastName) name += ` ${lastName}`;
 
   return name;
-}
-
-function getImgCaption(name: string) {
-  return `👋 Привет, ${name}! Меня зовут Матвей и я снимаю такие туры апартаментов, что гости выстраиваются в очередь и пересматривают их по несколько раз😎!
-
-📌 Этот бот поможет вам посмотреть примеры наших работ, узнать подробности и рассчитать стоимость.`;
 }

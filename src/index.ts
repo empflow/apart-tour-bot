@@ -4,6 +4,7 @@ import "./bot";
 
 // listeners
 import "./listeners/callbackQuery";
+import "./listeners/error";
 import "./listeners/pollingError";
 import "./listeners/contact";
 

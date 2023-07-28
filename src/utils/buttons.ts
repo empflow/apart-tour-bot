@@ -36,6 +36,6 @@ export const seePricesButton: InlineKeyboardButton = {
 };
 
 export const sendMyPhoneNumberButton: KeyboardButton = {
-  text: "Отправить мой номер телефона",
+  text: "📞 Отправить мой номер телефона",
   request_contact: true,
 };

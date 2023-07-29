@@ -1,10 +1,10 @@
 import bot from "../bot";
 import buyTour from "../cbHandlers/buyTour";
-import examples from "../cbHandlers/examples";
+import seeExamples from "../cbHandlers/seeExamples";
 import learnMore from "../cbHandlers/learnMore";
 import seePrices from "../cbHandlers/seePrices";
-import mainMenu from "../cbHandlers/mainMenu";
-import why from "../cbHandlers/why";
+import openMenu from "../cbHandlers/openMenu";
+import seeReasonsToBuy from "../cbHandlers/seeReasonsToBuy";
 import messageDirectly from "../cbHandlers/messageDirectly";
 import respTexts from "../respTexts";
 
@@ -15,16 +15,16 @@ bot.on("callback_query", (q) => {
 
   switch (data) {
     case "mainMenu":
-      mainMenu(chatId);
+      openMenu(chatId);
       break;
     case "learnMore":
       learnMore(chatId);
       break;
     case "why":
-      why(chatId);
+      seeReasonsToBuy(chatId);
       break;
     case "examples":
-      examples(chatId);
+      seeExamples(chatId);
       break;
     case "buyTour":
       buyTour(chatId);

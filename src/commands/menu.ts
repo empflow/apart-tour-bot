@@ -1,6 +1,6 @@
 import bot from "../bot";
-import mainMenu from "../cbHandlers/mainMenu";
+import openMenu from "../cbHandlers/openMenu";
 
 bot.onText(/\/menu/, (msg) => {
-  mainMenu(msg.chat.id);
+  openMenu(msg.chat.id);
 });

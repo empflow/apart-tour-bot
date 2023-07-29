@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
+
 import "./bot";
 
 // listeners
@@ -14,6 +15,7 @@ import "./commands/getChatId";
 import "./commands/menu";
 
 import connectDb from "./utils/connectDb";
+import "./utils/startWebServer";
 
 (async () => {
   await connectDb();

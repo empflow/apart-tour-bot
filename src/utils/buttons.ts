@@ -44,6 +44,6 @@ export const messageDirectlyBtnWithLink: InlineKeyboardButton = {
 };
 
 export const sendMyPhoneNumKbBtn: KeyboardButton = {
-  text: "📞 Отправить мой номер телефона",
+  text: "📞 Отправить номер телефона",
   request_contact: true,
 };

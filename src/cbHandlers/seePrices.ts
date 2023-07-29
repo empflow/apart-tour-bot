@@ -8,6 +8,7 @@ export default function seePrices(chatId: number) {
     reply_markup: {
       keyboard: [[sendMyPhoneNumKbBtn]],
       one_time_keyboard: true,
+      resize_keyboard: true,
     },
   });
 }

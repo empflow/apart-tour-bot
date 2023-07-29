@@ -2,17 +2,19 @@ import bot from "../bot";
 import TelegramBot from "node-telegram-bot-api";
 import { ReplyMarkup } from "../utils/types";
 import respTexts from "../respTexts";
+import fs from "fs";
+import path from "path";
 
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
   const imgFileId =
-    "AgACAgIAAxkDAAM8ZMJejTzfYM6U54HboOb9cpeEKVQAAr_OMRvSehlKWyltMhiSsoMBAAMCAAN3AAMvBA";
+    "AgACAgIAAxkDAAIDDWTD2FB8f_GlQebKqvknlxJseveUAAIqzDEb81AgSqzE0_qyUPL1AQADAgADeAADLwQ";
 
   const name = getUserNameFromMsg(msg);
-  await bot.sendPhoto(chatId, imgFileId, {
-    caption: respTexts.start(name),
+  bot.sendPhoto(chatId, imgFileId, {
     reply_markup: getReplyMarkup(),
     parse_mode: "HTML",
+    caption: respTexts.start(name),
   });
 });
 

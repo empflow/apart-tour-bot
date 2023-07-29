@@ -11,6 +11,8 @@ import "./listeners/contact";
 // commands
 import "./commands/start";
 import "./commands/getChatId";
+import "./commands/menu";
+
 import connectDb from "./utils/connectDb";
 
 (async () => {
